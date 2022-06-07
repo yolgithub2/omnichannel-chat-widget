@@ -35,6 +35,11 @@ export class BasePage {
   public async openLiveChatWidget() {
       const path = fs.realpathSync(CustomLiveChatWidgetConstants.CustomLiveChatWidgetFilePath);
       await this.Page.goto("file://" + path, { waitUntil: "domcontentloaded" });
+      await this.Page.waitForTimeout(5000);
+  }
+
+  public async startProactiveChat() {
+      await this.Page.evaluate(() => eval("startProactiveChat()"));
   }
 
   public async waitUntilLiveChatSelectorIsVisible(

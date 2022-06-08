@@ -5,10 +5,8 @@ export enum CustomLiveChatWidgetConstants {
   DefaultTimeout = 1000,
 }
 
-export enum Timeout {
-  DefaultTimeout = 1000,
-  OneMinTimeout = 60000,
-  ThirtySecTimeout = 30000
+export enum TimeoutConstants {
+  OneMinTimeout = 60000
 }
 
 export const DiagnosticData = [

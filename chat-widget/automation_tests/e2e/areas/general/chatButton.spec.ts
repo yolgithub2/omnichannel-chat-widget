@@ -22,13 +22,15 @@ describe("live chat button", () => {
         if (context) {
             await context.close();
         }
-        await newBrowser?.close();
+        if (newBrowser) {
+            await newBrowser.close();
+        }
     });
 
     test("chat button visible", async () => {
         page = new BasePage(await context.newPage());
         await page.openLiveChatWidget();
-        await page.waitUntilLiveChatSelectorIsVisible(
+        const isLiveChatButtonVisible = await page.waitUntilLiveChatSelectorIsVisible(
             CustomLiveChatWidgetConstants.LiveChatButtonId
         );
     });

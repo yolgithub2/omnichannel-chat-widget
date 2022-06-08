@@ -22,6 +22,7 @@ describe("live chat button", () => {
         if (context) {
             await context.close();
         }
+        await newBrowser?.close();
     });
 
     test("chat button visible", async () => {

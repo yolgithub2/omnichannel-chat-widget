@@ -1,7 +1,8 @@
 export enum CustomLiveChatWidgetConstants {
   CustomLiveChatWidgetFilePath = "customlivechatwidgets/CustomLiveChatWidget.html",
   LiveChatButtonId = "#oc-lcw-chat-button-title",
-  ProactiveChatId = "#oc-lcw-proactivechat"
+  ProactiveChatId = "#oc-lcw-proactivechat",
+  DefaultTimeout = 1000,
 }
 
 export enum Timeout {
